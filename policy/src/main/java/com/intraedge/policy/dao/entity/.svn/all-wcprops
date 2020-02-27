@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dao/entity
+END
+Employee.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dao/entity/Employee.java
+END
+Policy.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dao/entity/Policy.java
+END
+EmployeeRole.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dao/entity/EmployeeRole.java
+END
+EmpPolicyStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dao/entity/EmpPolicyStatus.java
+END
+Person.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dao/entity/Person.java
+END
+AuditableEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dao/entity/AuditableEntity.java
+END

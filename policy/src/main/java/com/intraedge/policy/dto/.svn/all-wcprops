@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dto
+END
+Employee.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dto/Employee.java
+END
+Policy.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dto/Policy.java
+END
+ChangePassword.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dto/ChangePassword.java
+END
+CreatePolicyRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dto/CreatePolicyRequest.java
+END

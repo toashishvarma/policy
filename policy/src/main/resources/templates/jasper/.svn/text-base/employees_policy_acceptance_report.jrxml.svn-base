@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+    <property name="template.type" value="columnar"/>
+    <property name="ireport.zoom" value="1.0"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="0"/>
+    <style name="Title" forecolor="#000000" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+    <style name="SubTitle" forecolor="#666666" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+    <style name="Column header" forecolor="#666666" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+    <style name="Detail" mode="Transparent" pdfFontName="Times-Roman"/>
+    <style name="Row" mode="Transparent" pdfFontName="Times-Roman">
+        <conditionalStyle>
+            <conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+            <style mode="Opaque" backcolor="#F0EFEF"/>
+        </conditionalStyle>
+    </style>
+    <style name="table">
+        <box>
+            <pen lineWidth="1.0" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <subDataset name="Employees">
+        <queryString language="SQL">
+            <![CDATA[SELECT
+     employee.`email` AS employee_email,
+     employee.`first` AS employee_first,
+     employee.`last` AS employee_last,
+     employee.`phone` AS employee_phone
+FROM
+     `employee` employee INNER JOIN `emp_policy_status` emp_policy_status ON employee.`id` = emp_policy_status.`employee_id`]]>
+        </queryString>
+        <field name="employee_email" class="java.lang.String"/>
+        <field name="employee_first" class="java.lang.String"/>
+        <field name="employee_last" class="java.lang.String"/>
+        <field name="employee_phone" class="java.lang.String"/>
+        <group name="employee_email">
+            <groupExpression><![CDATA[$F{employee_email}]]></groupExpression>
+        </group>
+    </subDataset>
+    <queryString>
+        <![CDATA[SELECT
+     p.`name`,
+     p.`description`,
+     p.`id` AS policy_id
+FROM
+     `policy` p]]>
+    </queryString>
+    <field name="name" class="java.lang.String"/>
+    <field name="description" class="java.lang.String"/>
+    <field name="policy_id" class="java.lang.Long"/>
+    <group name="name">
+        <groupExpression><![CDATA[$F{name}]]></groupExpression>
+        <groupHeader>
+            <band height="31">
+                <frame>
+                    <reportElement mode="Opaque" x="0" y="7" width="555" height="24" forecolor="#B89F7D" backcolor="#9DB1B8"/>
+                    <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                        <reportElement style="SubTitle" isPrintRepeatedValues="false" x="2" y="1" width="479" height="23" forecolor="#FFFFFF"/>
+                        <textElement>
+                            <font isBold="false"/>
+                        </textElement>
+                        <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+                    </textField>
+                </frame>
+            </band>
+        </groupHeader>
+        <groupFooter>
+            <band height="3"/>
+        </groupFooter>
+    </group>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="132" splitType="Stretch">
+            <staticText>
+                <reportElement style="Title" x="144" y="10" width="413" height="93"/>
+                <textElement>
+                    <font size="36" isBold="false"/>
+                </textElement>
+                <text><![CDATA[Policy Acceptance Report]]></text>
+            </staticText>
+            <image scaleImage="Clip" hAlign="Left" vAlign="Top" isLazy="true">
+                <reportElement x="4" y="10" width="127" height="122"/>
+                <imageExpression><![CDATA[getClass().getClassLoader().getResourceAsStream("templates/jasper/IE_Logo.gif")]]></imageExpression>
+            </image>
+        </band>
+    </title>
+    <pageHeader>
+        <band splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band splitType="Stretch"/>
+    </columnHeader>
+    <detail>
+        <band height="91" splitType="Stretch">
+            <elementGroup/>
+            <subreport>
+                <reportElement isPrintRepeatedValues="false" x="73" y="0" width="200" height="91"/>
+                <subreportParameter name="policy_id">
+                    <subreportParameterExpression><![CDATA[$F{policy_id}]]></subreportParameterExpression>
+                </subreportParameter>
+                <connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+                <subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[JasperCompileManager.compileReport(getClass().getClassLoader().getResourceAsStream("templates/jasper/employees_policy_acceptance_sub_report.jrxml"))]]></subreportExpression>
+            </subreport>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="7" splitType="Stretch">
+            <line>
+                <reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+                <graphicElement>
+                    <pen lineWidth="0.5" lineColor="#999999"/>
+                </graphicElement>
+            </line>
+        </band>
+    </columnFooter>
+    <pageFooter>
+        <band height="13" splitType="Stretch">
+            <frame>
+                <reportElement mode="Opaque" x="2" y="0" width="555" height="13" forecolor="#D0B48E" backcolor="#9DB1B8"/>
+                <textField evaluationTime="Report">
+                    <reportElement style="Column header" x="513" y="-1" width="40" height="13" forecolor="#FFFFFF"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="10" isBold="false"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement style="Column header" x="433" y="-1" width="80" height="13" forecolor="#FFFFFF"/>
+                    <textElement textAlignment="Right" verticalAlignment="Middle">
+                        <font size="10" isBold="false"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+                </textField>
+                <textField pattern="EEEEE dd MMMMM yyyy">
+                    <reportElement style="Column header" x="2" y="0" width="197" height="13" forecolor="#FFFFFF"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="10" isBold="false"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+                </textField>
+            </frame>
+        </band>
+    </pageFooter>
+    <summary>
+        <band splitType="Stretch"/>
+    </summary>
+</jasperReport>

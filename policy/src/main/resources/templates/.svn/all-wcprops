@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/!svn/ver/178/policy/trunk/src/main/resources/templates
+END
+forgot_password.vm
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/!svn/ver/178/policy/trunk/src/main/resources/templates/forgot_password.vm
+END
+user_notification.vm
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/!svn/ver/178/policy/trunk/src/main/resources/templates/user_notification.vm
+END
+policy_added_notification.vm
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/!svn/ver/178/policy/trunk/src/main/resources/templates/policy_added_notification.vm
+END
+policy_accepted_notification.vm
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/!svn/ver/178/policy/trunk/src/main/resources/templates/policy_accepted_notification.vm
+END

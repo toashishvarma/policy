@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/repos/!svn/ver/178/policy/trunk
+END
+sqls
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/repos/!svn/ver/178/policy/trunk/sqls
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/repos/!svn/ver/178/policy/trunk/pom.xml
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/repos/!svn/ver/178/policy/trunk/build.xml
+END

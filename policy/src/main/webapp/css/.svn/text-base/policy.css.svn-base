@@ -1,0 +1,38 @@
+@CHARSET "ISO-8859-1";
+
+.loginForm {
+    width: 350px;
+    padding: 20px;
+    border: 1px solid #270644;
+}
+
+.policyTable{
+	border : 1px solid #6699cc;
+	empty-cells : show;
+}
+
+.policyTableSub{
+	border : 1px solid #6699cc;
+	font-size : 13px;
+	font-weight : bold;
+	font-family : verdana;
+	background-color : #eeeeee;
+}
+
+.policyTableData{
+	padding-top:5px;
+	padding-bottom:5px;
+	font-family : verdana;
+	border : 1px solid #6699cc;
+	font-size : 12px;
+}
+
+.headerTable{
+	font-family : verdana;
+}
+
+.body{
+	font-family : verdana;
+}
+.html, .body, .div, .iframe { margin:0; padding:0; height:100%; }
+.iframe { display:block; width:100%; border:none;}

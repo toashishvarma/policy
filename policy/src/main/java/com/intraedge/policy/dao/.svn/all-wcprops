@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dao
+END
+EmployeeDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dao/EmployeeDao.java
+END
+IPersonDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dao/IPersonDao.java
+END
+PolicyDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dao/PolicyDao.java
+END
+EmployeeDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dao/EmployeeDaoImpl.java
+END
+PolicyDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/dao/PolicyDaoImpl.java
+END

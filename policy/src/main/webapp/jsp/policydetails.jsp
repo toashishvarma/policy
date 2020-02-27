@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+         pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
+ <jsp:include page="header.jsp"/>
+<%-- <jsp:include page="${policy.path}"/>--%>
+ 
+ <!-- <embed width="100%" height="450" href="example1.pdf" src="${pageContext.request.contextPath}/document.do?policyName=${policy.name}">-->
+ <embed width="100%" height="450" href="example1.pdf" src="${pageContext.request.contextPath}/${policy.path}">
+<br/>
+<br/>
+<hr/>
+<div align="center">
+	<form action="/policy/accept.do" method="post">
+   		<input type="hidden" name="policyName" value="${policy.name}"/>
+    <c:if test="${policy.enabled}">
+    <c:choose>
+        <c:when test='${accepted == true}'>
+            <input type="submit" value="Accept" disabled="disabled" >
+        </c:when>
+        <c:otherwise>
+            <input type="submit" value="Accept" >
+        </c:otherwise>
+    </c:choose>
+    </c:if>
+</form>
+ <sec:authorize access="hasRole('ROLE_SUPERVISOR')">
+ <form action="/policy/approvepolicy.do" method="post">
+ <input type="hidden" name="policyName" value="${policy.name}"/>
+    <c:choose>
+        <c:when test='${policy.enabled == true}'>
+            <input type="submit" value="Approve" disabled="disabled" >
+        </c:when>
+        <c:otherwise>
+            <input type="submit" value="Approve" >
+        </c:otherwise>
+    </c:choose>
+   </form>
+ </sec:authorize>
+</div>
+<jsp:include page="footer.jsp"/>

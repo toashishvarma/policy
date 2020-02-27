@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/!svn/ver/178/policy/trunk/src/main/resources
+END
+spring-employee-dao-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/!svn/ver/178/policy/trunk/src/main/resources/spring-employee-dao-context.xml
+END
+spring-policy-application-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/!svn/ver/178/policy/trunk/src/main/resources/spring-policy-application-context.xml
+END
+messages.properties
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/178/policy/trunk/src/main/resources/messages.properties
+END
+spring-policy-security-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/!svn/ver/178/policy/trunk/src/main/resources/spring-policy-security-context.xml
+END
+spring-email-configuration-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/!svn/ver/178/policy/trunk/src/main/resources/spring-email-configuration-context.xml
+END
+spring-policy-acl-context.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/!svn/ver/178/policy/trunk/src/main/resources/spring-policy-acl-context.xml
+END
+application.properties
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/!svn/ver/178/policy/trunk/src/main/resources/application.properties
+END
+log4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/!svn/ver/186/policy/trunk/src/main/resources/log4j.xml
+END

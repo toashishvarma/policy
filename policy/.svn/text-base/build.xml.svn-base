@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     Nov 8, 2011 2:24:57 PM                                                        
+
+     project    
+     description 
+     Allows hot deploy for tomcat. Smartly replaces only resources that are modified.
+                  
+     sbawaska                                                                
+     ====================================================================== -->
+<project name="dev-tools" default="default">
+	<description>
+            description
+    </description>
+	<!-- Replace this property as per your unpacked war path-->
+	<property name="tomcat.home" value="C:\dev\ApacheSF\apache-tomcat-6.0.32_policy\apache-tomcat-6.0.32">
+	</property>
+	<property name="tomcat.webapps" value="${tomcat.home}\webapps">
+	</property>
+	<property name="war.name" value="policy">
+	</property>
+
+	<property name="my.webapp" value="${tomcat.webapps}/${war.name}">
+	</property>
+	<property name="web.inf.dir" value="${my.webapp}/WEB-INF"/>
+	<property name="classes.dir" value="${web.inf.dir}/classes">
+	</property>
+
+	<property name="views.dir" value="${my.webapp}/jsp"/>
+	<!-- ================================= 
+          target: default : performs all targets              
+         ================================= -->
+	<target name="default" depends="copy.classes,copy.views,copy.properties,copy.spring.xmls,copy.web-inf.xmls" description="description">
+	</target>
+
+
+	<target name="copy.classes">
+		<copy todir="${classes.dir}">
+			<fileset dir="target/classes" id="id">
+				<include name="**/*.class" />
+				<exclude name="**/*Test.class" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="copy.views">
+		<copy todir="${views.dir}">
+			<fileset dir="src/main/webapp/jsp" id="id">
+				<include name="**/*.jsp" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="copy.properties">
+		<copy todir="${classes.dir}">
+			<fileset dir="src/main/resources" id="id">
+				<include name="**/*.properties" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="copy.spring.xmls">
+		<copy todir="${classes.dir}">
+			<fileset dir="src/main/resources" id="id">
+				<include name="**/*.xml" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="copy.web-inf.xmls">
+		<copy todir="${web.inf.dir}">
+			<fileset dir="src/main/webapp/WEB-INF">
+				<include name="**/*.xml" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="copy.libs">
+		<copy todir="${web.inf.dir}/lib">
+			<fileset dir="target\policy-0.0.1-SNAPSHOT\WEB-INF\lib"/>
+		</copy>
+	</target>
+
+	<target name="clean">
+		<deltree dir="${tomcat.home}/work"/>
+		<deltree dir="${tomcat.home}/logs"/>
+		<mkdir dir="${tomcat.home}/work"/>
+		<mkdir dir="${tomcat.home}/logs"/>
+	</target>
+
+	<target name="tomcat-start-debug">
+		<java jar="${tomcat.home}/bin/bootstrap.jar" fork="true">
+			<jvmarg value="-Dcatalina.home=${tomcat.home}"/>
+			<jvmarg value="-Xdebug"/>
+			<jvmarg
+	value="-Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n"/>
+		</java>
+	</target>
+
+	<target name="tomcat-start">
+		<java jar="${tomcat.home}/bin/bootstrap.jar" fork="true">
+			<jvmarg value="-Dcatalina.home=${tomcat.home}"/>
+		</java>
+	</target>
+
+	<target name="tomcat-stop">
+		<java jar="${tomcat.home}/bin/bootstrap.jar" fork="true">
+			<jvmarg value="-Dcatalina.home=${tomcat.home}"/>
+			<arg line="stop"/>
+		</java>
+	</target>
+	<target name="tomcat-restart">
+		<java jar="${tomcat.home}/bin/bootstrap.jar" fork="true">
+			<jvmarg value="-Dcatalina.home=${tomcat.home}"/>
+		</java>
+		<arg line="restart"/>
+	</target>
+
+</project>

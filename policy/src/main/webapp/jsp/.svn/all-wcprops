@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/!svn/ver/178/policy/trunk/src/main/webapp/jsp
+END
+menu.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/!svn/ver/178/policy/trunk/src/main/webapp/jsp/menu.jsp
+END
+policydetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/!svn/ver/178/policy/trunk/src/main/webapp/jsp/policydetails.jsp
+END
+add_user.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/!svn/ver/178/policy/trunk/src/main/webapp/jsp/add_user.jsp
+END
+index.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/!svn/ver/178/policy/trunk/src/main/webapp/jsp/index.jsp
+END
+addPolicy.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/!svn/ver/178/policy/trunk/src/main/webapp/jsp/addPolicy.jsp
+END
+changePassword.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/178/policy/trunk/src/main/webapp/jsp/changePassword.jsp
+END
+header.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/!svn/ver/178/policy/trunk/src/main/webapp/jsp/header.jsp
+END
+login.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/!svn/ver/178/policy/trunk/src/main/webapp/jsp/login.jsp
+END
+error.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/!svn/ver/178/policy/trunk/src/main/webapp/jsp/error.jsp
+END
+footer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/!svn/ver/178/policy/trunk/src/main/webapp/jsp/footer.jsp
+END
+listemployees.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/!svn/ver/178/policy/trunk/src/main/webapp/jsp/listemployees.jsp
+END
+reports.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/!svn/ver/178/policy/trunk/src/main/webapp/jsp/reports.jsp
+END
+forgotPassword.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/178/policy/trunk/src/main/webapp/jsp/forgotPassword.jsp
+END

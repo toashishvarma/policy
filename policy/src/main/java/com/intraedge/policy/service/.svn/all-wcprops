@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/service
+END
+EmployeeService.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/service/EmployeeService.java
+END
+PolicyService.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/service/PolicyService.java
+END
+EmployeeServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/service/EmployeeServiceImpl.java
+END
+PolicyServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/service/PolicyServiceImpl.java
+END
+ReportService.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/service/ReportService.java
+END
+ReportServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/!svn/ver/178/policy/trunk/src/main/java/com/intraedge/policy/service/ReportServiceImpl.java
+END

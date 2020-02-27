@@ -1,0 +1,16 @@
+
+
+INSERT INTO `employee` (`id`,`email`,`first`,`last`,`phone`,`enabled`,`password`) VALUES (1,'a@b.com','aaa','bbbb','123',1,'a');
+
+use policydb;
+CREATE TABLE `user_roles` (
+  `USER_ROLE_ID` BIGINT(10) UNSIGNED NOT NULL auto_increament,
+  `USER_ID` BIGINT(20) NOT NULL,
+  `AUTHORITY` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`USER_ROLE_ID`),
+  KEY `FK_user_roles` (`USER_ID`),
+  CONSTRAINT `FK_user_roles` FOREIGN KEY (`USER_ID`) REFERENCES `employee` (`ID`)
+);
+
+
+

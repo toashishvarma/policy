@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	 http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	<context:annotation-config />
+	<context:component-scan base-package="com.intraedge" />
+	<tx:annotation-driven />
+	<bean id="policyJdbcDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<!-- Connection properties -->
+		<property name="driverClass" value="${policy.db.driver}" />
+		<property name="jdbcUrl" value="${policy.db.url}" />
+		<property name="user" value="${policy.db.username}" />
+		<property name="password" value="${policy.db.password}" />
+		<!-- Pool properties -->
+		<property name="minPoolSize" value="5" />
+		<property name="maxPoolSize" value="100" />
+		<property name="maxStatements" value="100" />
+		<property name="idleConnectionTestPeriod" value="3000" />
+	</bean>
+
+
+	<bean id="entitiManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="policy-jpa" />
+		<property name="dataSource" ref="policyJdbcDataSource" />
+	</bean>
+
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
+		p:entityManagerFactory-ref="entitiManagerFactory" />
+
+</beans>
