@@ -7,7 +7,7 @@
 		<properties>
 			<!-- Database connection settings -->
 			<property name="hibernate.show_sql" value="false" />
-			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
 		</properties>
 
 	</persistence-unit>
