@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>policy</name>
 	<properties>
-		<spring.version>3.0.0.RELEASE</spring.version>
+		<spring.version>3.2.5.RELEASE</spring.version>
 	</properties>
 
 	<build>
